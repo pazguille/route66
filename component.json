@@ -1,0 +1,20 @@
+{
+  "name": "route66",
+  "repo": "pazguille/route66",
+  "description": "Routing for web browsers.",
+  "version": "0.0.1",
+  "author": "Guille Paz <guille87paz@gmail.com>",
+  "twitter": "@pazguille",
+  "keywords": [
+    "routes",
+    "hash",
+    "popstate",
+    "history"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
