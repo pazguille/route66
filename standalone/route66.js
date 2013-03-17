@@ -9,22 +9,26 @@
 
 
     /**
-     * Path Class
+     * Create a new Path.
+     * @constructor
+     * @param {string} path - The path of a route.
+     * @property {string} url
+     * @property {array} listeners
+     * @property {string} regexp
+     * @returns {Object}
      */
     function Path(path) {
-        this.init(path);
-
-        return this;
-    }
-
-    Path.prototype.init = function (path) {
         this.url = path;
         this.listeners = [];
         this.toRegExp();
 
         return this;
-    };
+    }
 
+    /**
+     * Converts the path string into a regexp.
+     * @public
+     */
     Path.prototype.toRegExp = function () {
         this.regexp = new RegExp('^' + this.url.replace(/:\w+/g, '([^\\/]+)').replace(/\//g, '\\/') + '$');
 
@@ -35,12 +39,24 @@
     /**
      * Route66 Class
      */
+
+    /**
+     * Create a new router.
+     * @constructor
+     * @property {array} paths
+     * @property {string} regexp
+     * @returns {Object}
+     */
     function Route66() {
         this.init();
 
         return this;
     }
 
+    /**
+     * Initialize a new router.
+     * @constructs
+     */
     Route66.prototype.init = function () {
         var that = this,
             hash;
@@ -70,6 +86,10 @@
 
     };
 
+    /**
+     * Checks if the current hash matches with a path.
+     * @param {string} hash - The current hash.
+     */
     Route66.prototype._match = function (hash) {
         var listeners,
             key,
@@ -105,6 +125,11 @@
         return this;
     };
 
+    /**
+     * Creates a new path and stores its listener into the collection.
+     * @param {string} path -
+     * @param {funtion} listener -
+     */
     Route66.prototype.path = function (path, listener) {
         var key;
 
@@ -123,6 +148,9 @@
         return this;
     };
 
+    /**
+     * Creates a new path and stores its listener into the collection.
+     */
     Route66.prototype._createPath = function (path, listener) {
         if (this._collection[path] === undefined) {
             this._collection[path] = new Path(path);
@@ -131,6 +159,11 @@
         this._collection[path].listeners.push(listener);
     };
 
+    /**
+     * Removes a path and its litener from the collection with the given path.
+     * @param {string} path
+     * @param {funtion} listener
+     */
     Route66.prototype.remove = function (path, listener) {
         var listeners = this._collection[path],
             i = 0,
@@ -152,6 +185,11 @@
         return this;
     };
 
+    /**
+     * Returns a collections of listeners with the given path or an entire collection.
+     * @param {string} path
+     * @return {array}
+     */
     Route66.prototype.paths = function (path) {
         return (path !== undefined) ? this._collection[path] : this._collection;
     };
