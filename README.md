@@ -51,7 +51,7 @@ routes.path({
 
 Somewhere in your HTML code, you should have anchor tags with #hash or #!/hash hyperlinks related to router js structure.
 ```html
-<a href="/#!/user/pazguille">User</a> | <a href="/#!/user/pazguille/editar">Editar</a>
+<a href="/#!/user/pazguille">User</a> | <a href="/#!/user/pazguille/edit">Edit</a>
 ```
 
 ## API
