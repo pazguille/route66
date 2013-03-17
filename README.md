@@ -1,8 +1,8 @@
 # J.S. Route 66
 
-![U.S. Route 66 Logo](http://vector.us/files/images/1/5/15596/route_66.png)
-
 Simple and tiny hash router library for web browsers. J.S. Route 66 is used for routing your web application URL's when using hash tags(#). Eg: www.example.com/#pazguille or www.example.com/#!/pazguille
+
+![U.S. Route 66 Logo](http://www.whatonearthcatalog.com/graphics/products/small/CK1462.jpg)
 
 ## Installation
 
