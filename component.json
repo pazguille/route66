@@ -1,8 +1,8 @@
 {
   "name": "route66",
   "repo": "pazguille/route66",
-  "description": "Routing for web browsers.",
-  "version": "0.0.1",
+  "description": "Simple and tiny hash router library for web browsers.",
+  "version": "0.0.2",
   "author": "Guille Paz <guille87paz@gmail.com>",
   "twitter": "@pazguille",
   "keywords": [
