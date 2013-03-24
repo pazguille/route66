@@ -58,12 +58,29 @@ Somewhere in your HTML code, you should have anchor tags with #hash or #!/hash h
 
 ### Route66#path(path, listener)
 Creates a new `path` and stores its `listener` into the collection.
+- `path` - The path you want to create.
+- `listener` - Listener you want to add to given path.
+
+```js
+routes.path('/user/:id', user);
+```
 
 ### Route66#remove(path, listener)
 Removes a `path` and its `litener` from the collection with the given `path`. The `listener` is optional.
+- `path` - The path you want to remove.
+- `listener` (optional) - Listener you want to remove from given path.
+
+```js
+routes.remove('/user/:id', user);
+```
 
 ### Route66#paths(path)
-Returns a collections of `listeners` with the given `path`. The `path` is optional. If not have a `path` as parameter it returns an entire collection.
+Returns a collections of `listeners` with the given `path`. The `path` is optional. If not have a `path` as parameter it returns an entire collection of paths-listeners.
+- `path` (optional)
+
+```js
+routes.paths('/user/:id'); // returns [user]
+```
 
 ## Contact
 - Guillermo Paz (Frontend developer - JavaScript developer | Web standards lover)
