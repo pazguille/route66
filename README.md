@@ -74,12 +74,12 @@ Removes a `path` and its `litener` from the collection with the given `path`. Th
 routes.remove('/user/:id', user);
 ```
 
-### Route66#paths(path)
-Returns a collections of `listeners` with the given `path`. The `path` is optional. If not have a `path` as parameter it returns an entire collection of paths-listeners.
+### Route66#getListeners(path)
+Returns a collections of `listeners` to the given `path`. The `path` is optional. If not have a `path` as parameter it returns an entire collection of paths-listeners.
 - `path` [optional]
 
 ```js
-routes.paths('/user/:id'); // returns [user]
+routes.getListeners('/user/:id'); // returns [user]
 ```
 
 ## Contact
