@@ -186,11 +186,11 @@
     };
 
     /**
-     * Returns a collections of listeners with the given path or an entire collection.
+     * Returns a collections of listeners to the given path or an entire collection.
      * @param {string} path
      * @return {array}
      */
-    Route66.prototype.paths = function (path) {
+    Route66.prototype.getListeners = function (path) {
         return (path !== undefined) ? this._collection[path] : this._collection;
     };
 
