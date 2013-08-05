@@ -2,7 +2,7 @@
   "name": "route66",
   "repo": "pazguille/route66",
   "description": "Simple routing library using hashbang for web browsers",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "Guille Paz <guille87paz@gmail.com>",
   "twitter": "@pazguille",
   "keywords": [
